@@ -17,7 +17,7 @@ const fleur = Fleur_De_Leah({
 
 export default function NavBar() {
     return (
-        <nav className="flex items-center justify-between bg-white p-8 text-black">
+        <nav className="flex items-center justify-between bg-white  p-8 text-gray-800 shadow-md">
             <div className={`text-3xl font-bold tracking-wide ${bodoni.className}`}>
                 Laura.art
             </div>
