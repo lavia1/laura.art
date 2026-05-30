@@ -51,9 +51,44 @@ export default function Home() {
       </div>
 
       {/* SEPARATE CONTENT */}
-      <div className="p-10">
-        <h1>Tilaustyöt</h1>
+<div className="p-30 px-40 bg-[#d9d9d9]">
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-15">
+    <a
+      href="/tilaustyot"
+      className="relative overflow-hidden rounded-lg group"
+    >
+      <img
+        src="\sininenbw.jpg"
+        alt="Tilaustyöt"
+        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+      />
+
+      <div className="absolute top-0 left-0 w-full bg-black/60 py-4 flex justify-center">
+        <span className={` text-white text-6xl px-6 py-4 font-semibold ${mea.className}`}>
+          Tilaustyöt
+        </span>
       </div>
+    </a>
+
+    <a
+      href="/galleria"
+      className="relative overflow-hidden rounded-lg group"
+    >
+      <img
+        src="/auringonkukkapelto.jpg"
+        alt="Galleria"
+        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+      />
+
+      <div className="absolute top-0 left-0 w-full bg-black/60 py-4 flex justify-center">
+        <span className={` text-white text-6xl px-6 py-4 font-semibold ${mea.className}`}>
+          Valmiit teokset
+        </span>
+      </div>
+    </a>
+  </div>
+</div>
 
     </div>
   );
