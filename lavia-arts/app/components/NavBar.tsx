@@ -30,14 +30,17 @@ export default function NavBar() {
                     Tilaustyöt
                 </Link>
                 <Link href="/valmiitmaalaukset" className="hover:text-gray-400">
-                    Valmiit maalaukset
+                    Valmiit teokset
                 </Link>
-                <Link href="/" className="hover:text-gray-400">
+                <Link href="/kuvagalleria" className="hover:text-gray-400">
+                    Custom työt
+                </Link>
+                <Link href="/kuvagalleria" className="hover:text-gray-400">
                     Kuvagalleria
                 </Link>
-                <Link href="/" className="hover:text-gray-400">
+                <a href="#yhteystiedot" className="hover:text-gray-400">
                     Yhteystiedot
-                </Link>
+                </a>
                 
             </div>
             

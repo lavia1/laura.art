@@ -51,66 +51,84 @@ export default function Home() {
       </div>
 
       {/* SEPARATE CONTENT */}
-      <div className="p-30 px-40 bg-[#d9d9d9]">
+      <div className="p-20 px-20 bg-white">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-          {/* Tilaustyöt */}
-          <div>
-            <a
-              href="/tilaustyot"
-              className="relative overflow-hidden rounded-lg group block aspect-[4/3]"
-            >
-              <img
-                src="/sininenbw.jpg"
-                alt="Tilaustyöt"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
+    {/* Tilaustyöt */}
+    <div>
+      <a
+        href="/tilaustyot"
+        className="relative overflow-hidden rounded-lg group block aspect-[4/3]"
+      >
+        <img
+          src="/sininenbw.jpg"
+          alt="Tilaustyöt"
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
 
-              <div className="absolute top-0 left-0 w-full bg-black/60 py-4 flex justify-center">
-                <span className={`text-white text-6xl px-6 py-4 font-semibold ${mea.className}`}>
-                  Tilaustyöt
-                </span>
-              </div>
-            </a>
-
-            <p className={`mt-4 text-center text-xl ${bodoni.className}`}>
-              Onko lahjaidea hakusessa tai haluaisitko muuten oman menopelin koristeeksi? Toteutan yksilöllisiä tilaustöitä toiveiden mukaan.
-            </p>
-          </div>
-
-          {/* Valmiit teokset */}
-          <div>
-            <a
-              href="/galleria"
-              className="relative overflow-hidden rounded-lg group block aspect-[4/3]"
-            >
-              <img
-                src="/auringonkukkapelto.jpg"
-                alt="Valmiit teokset"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-
-              <div className="absolute top-0 left-0 w-full bg-black/60 py-4 flex justify-center">
-                <span className={`text-white text-6xl px-6 py-4 font-semibold ${mea.className}`}>
-                  Valmiit teokset
-                </span>
-              </div>
-            </a>
-
-            <p className={`mt-4 text-center text-xl ${bodoni.className}`}>
-              Tutustu valmiisiin maalauksiin ja löydä kotiisi tai lahjaksi
-              sopiva uniikki taideteos.
-            </p>
-          </div>
-
+        <div className="absolute top-0 left-0 w-full bg-black/60 py-4 flex justify-center">
+          <span className={`text-white text-6xl px-6 py-4 font-semibold ${mea.className}`}>
+            Tilaustyöt
+          </span>
         </div>
-      </div>
+      </a>
 
-      <div className="p-30 bg-white">
-        <h1>Laura</h1>
-      </div>
-
+      <p className={`mt-4 text-center text-xl ${bodoni.className}`}>
+        Onko lahjaidea hakusessa tai haluaisitko muuten oman menopelin koristeeksi? Toteutan yksilöllisiä tilaustöitä toiveiden mukaan.
+      </p>
     </div>
+
+    {/* Valmiit teokset */}
+    <div>
+      <a
+        href="/valmiitmaalaukset"
+        className="relative overflow-hidden rounded-lg group block aspect-[4/3]"
+      >
+        <img
+          src="/talvimaisema.jpeg"
+          alt="Valmiit teokset"
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+
+        <div className="absolute top-0 left-0 w-full bg-black/60 py-4 flex justify-center">
+          <span className={`text-white text-6xl px-6 py-4 font-semibold ${mea.className}`}>
+            Valmiit teokset
+          </span>
+        </div>
+      </a>
+
+      <p className={`mt-4 text-center text-xl ${bodoni.className}`}>
+        Tutustu valmiisiin maalauksiin ja löydä kotiisi tai lahjaksi sopiva uniikki taideteos.
+      </p>
+    </div>
+
+    {/* CUSTOM TYÖT (nyt oikein kolmas sarake) */}
+    <div>
+      <a
+        href="/custom"
+        className="relative overflow-hidden rounded-lg group block aspect-[4/3]"
+      >
+        <img
+          src="/bmwlogot.jpeg"
+          alt="Custom työt"
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+
+        <div className="absolute top-0 left-0 w-full bg-black/60 py-4 flex justify-center">
+          <span className={`text-white text-6xl px-6 py-4 font-semibold ${mea.className}`}>
+            Custom työt
+          </span>
+        </div>
+      </a>
+
+      <p className={`mt-4 text-center text-xl ${bodoni.className}`}>
+        Teen myös täysin uniikkeja tilaustöitä auton logoihin tai mittaristoihin 
+      </p>
+    </div>
+
+  </div>
+</div>
+</div>
   );
 }

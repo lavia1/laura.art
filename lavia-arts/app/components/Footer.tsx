@@ -1,11 +1,28 @@
+import { Monsieur_La_Doulaise, Mea_Culpa, Bodoni_Moda } from "next/font/google";
+
+const monsieur = Monsieur_La_Doulaise({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const bodoni = Bodoni_Moda({
+  weight: "900",
+  subsets: ["latin"],
+});
+
+const mea = Mea_Culpa({
+  weight: "400",
+  subsets: ["latin"],
+});
+
 export default function Footer() {
     return (
-        <footer className="bg-[#d9d9d9] py-10 px-8">
+        <footer id="yhteystiedot" className="bg-[#e5e5e5] py-10 px-8">
             <div className="mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-8">
 
                 {/* Vasen puoli */}
                 <div className="text-center md:text-left">
-                    <h3 className="text-2xl font-semibold">
+                    <h3 className= {`text-3xl font-semibold ${bodoni.className}`}>
                         Laura.art
                     </h3>
                     <p className="mt-2 text-gray-700">

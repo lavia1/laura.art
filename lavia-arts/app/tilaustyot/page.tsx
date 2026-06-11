@@ -21,12 +21,16 @@ export default function Tilaustyot() {
     "/sininenbw.jpg",
     "/mustang.jpg",
     "/punaisetaudit.jpg",
+    "/mustabmw.jpeg",
+    "/toinenmustabmw.jpeg",
+
   ];
 
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
   return (
-    <div className="max-w-6xl mx-auto p-6">
+    
+    <div className="max-w-6xl mx-auto p-6 ">
       <h1 className={`text-5xl font-bold mt-4 mb-4 ${mea.className}`}>
     Tilaustyöt alk. 30 €
   </h1>
@@ -37,7 +41,7 @@ export default function Tilaustyot() {
           <img
             src={selectedImage}
             alt="Valittu kuva"
-            className="w-full h-[600px] object-cover"
+            className="w-full h-[700px] object-cover"
           />
         </div>
 
@@ -49,7 +53,7 @@ export default function Tilaustyot() {
               onClick={() => setSelectedImage(image)}
               className={`overflow-hidden rounded-lg border-2 transition ${
                 selectedImage === image
-                  ? "border-blue-500"
+                  ? "border-gray-500"
                   : "border-gray-200"
               }`}
             >
@@ -64,7 +68,7 @@ export default function Tilaustyot() {
       </div>
       <div className="mt-4 max-w-3xl">
 
-        <p className="text-gray-700 leading-relaxed mb-4">Koko: sekä sovittaessa isompi</p>
+        <p className="text-gray-700 leading-relaxed mb-4">Koko:24x18 sekä sovittaessa isompi</p>
 
   <p className="text-gray-700 leading-relaxed mb-4">
     Haluaisitko näyttävän maalauksen omasta autostasi, mopostasi tai
@@ -78,7 +82,7 @@ export default function Tilaustyot() {
   </p>
 
   <p className="text-gray-700 leading-relaxed mb-4">
-    Sähköposti: <a href="mailto:laviaaw@hotmail.com"
+    Sähköposti: <a href="mailto:laviaaw@hotmail.com" 
     className="text-blue-500 hover:underline"
     >
       laviaaw@hotmail.com
