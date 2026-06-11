@@ -78,10 +78,10 @@ export default function Tilaustyot() {
   </p>
 
   <p className="text-gray-700 leading-relaxed mb-4">
-    Sähköposti: <a href="mailto:laviaaw@hotmail.fi"
+    Sähköposti: <a href="mailto:laviaaw@hotmail.com"
     className="text-blue-500 hover:underline"
     >
-      laviaaw@hotmail.fi
+      laviaaw@hotmail.com
     </a>
   </p>
     
