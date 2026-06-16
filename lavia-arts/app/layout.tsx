@@ -17,7 +17,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Laura.art",
   description: "Laura.art - Tilaustöitä, luontomaalauksia ja muuta taidetta",
+  openGraph: {
+    title: "Laura.art",
+    description: "Yksilölliset tilaustyöt ja maalaukset.",
+    images: ["/audi.jpg"],
+  },
 };
+
 
 export default function RootLayout({
   children,
