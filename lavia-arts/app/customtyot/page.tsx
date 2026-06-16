@@ -3,7 +3,7 @@
 export default function Customtyot() {
     return (
         <div>
-            <p>mau</p>
+            <p>sivut päivittyvät edelleen</p>
         </div>
     );
 }
