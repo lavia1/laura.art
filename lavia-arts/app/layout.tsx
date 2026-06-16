@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://lauraart.fi"),
   title: "Laura.art",
   description: "Laura.art - Tilaustöitä, luontomaalauksia ja muuta taidetta",
   openGraph: {
@@ -23,8 +24,8 @@ export const metadata: Metadata = {
     images: ["/audi.jpg"],
   },
    icons: {
-    icon: "/android-chrome-512x512.png",
-    apple: "/android-chrome-512x512.png",
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
   },
 };
 
