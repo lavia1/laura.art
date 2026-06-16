@@ -49,36 +49,40 @@ export default function Footer() {
 
                         {/* Instagram */}
                         <a
-                            href="https://instagram.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:scale-110 transition-transform"
-                            aria-label="Instagram"
-                        >
-                            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5z" />
-                                <path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 1.5A3.5 3.5 0 1112 15.5 3.5 3.5 0 0112 8.5z" />
-                                <circle cx="17.5" cy="6.5" r="1" />
-                            </svg>
-                        </a>
+  href="https://www.instagram.com/laviasart/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 hover:scale-105 transition-transform"
+  aria-label="Instagram"
+>
+  <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5z" />
+    <path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 1.5A3.5 3.5 0 1112 15.5 3.5 3.5 0 0112 8.5z" />
+    <circle cx="17.5" cy="6.5" r="1" />
+  </svg>
+
+  <span>@laviasart</span>
+</a>
 
                         {/* TikTok */}
-                        <a
-                            href="https://tiktok.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:scale-110 transition-transform"
-                            aria-label="TikTok"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 16 16"
-                                fill="currentColor"
-                                className="w-8 h-8"
-                            >
-                                <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
-                            </svg>
-                        </a>
+                      <a
+  href="https://www.tiktok.com/@laviasart"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 hover:scale-110 transition-transform"
+  aria-label="TikTok"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 16 16"
+    fill="currentColor"
+    className="w-8 h-8"
+  >
+    <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
+  </svg>
+
+  <span>@laviasart</span>
+</a>
 
 
 
