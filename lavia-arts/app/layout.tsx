@@ -22,6 +22,10 @@ export const metadata: Metadata = {
     description: "Yksilölliset tilaustyöt ja maalaukset.",
     images: ["/audi.jpg"],
   },
+   icons: {
+    icon: "/android-chrome-512x512.png",
+    apple: "/android-chrome-512x512.png",
+  },
 };
 
 
