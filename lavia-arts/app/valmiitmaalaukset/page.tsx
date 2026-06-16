@@ -3,7 +3,7 @@
 export default function Valmiitmaalaukset() {
     return (
         <div>
-            <h1>mau</h1>
+            <h1>sivut päivittyvät edelleen</h1>
         </div>
     );
 }
