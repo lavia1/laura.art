@@ -23,8 +23,8 @@ export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white text-gray-800 shadow-md">
-      <div className="mx-auto flex items-center justify-between px-4 py-4 md:px-8">
+    <nav className="bg-black text-[#beafc2] shadow-md border-b-2 border-[#beafc2] ">
+      <div className="mx-auto flex items-center justify-between px-6 py-8 md:px-8">
         {/* Logo */}
         <div className={`text-2xl md:text-3xl font-bold ${bodoni.className}`}>
           Laura.art
@@ -44,14 +44,6 @@ export default function NavBar() {
 
           <Link href="/valmiitmaalaukset" className="hover:text-gray-400">
             Valmiit teokset
-          </Link>
-
-          <Link href="/customtyot" className="hover:text-gray-400">
-            Custom työt
-          </Link>
-
-          <Link href="/kuvagalleria" className="hover:text-gray-400">
-            Kuvagalleria
           </Link>
 
           <a href="#yhteystiedot" className="hover:text-gray-400">
