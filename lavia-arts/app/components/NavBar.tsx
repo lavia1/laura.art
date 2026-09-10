@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Mea_Culpa, Fleur_De_Leah, Bodoni_Moda } from "next/font/google";
 import Link from "next/link";
 
@@ -21,10 +21,48 @@ const fleur = Fleur_De_Leah({
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showNav, setShowNav] = useState(true);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY <= 0) {
+        // Sivun yläreunassa navbar näkyy
+        setShowNav(true);
+      } else if (currentScrollY < lastScrollY) {
+        // Scrollataan ylöspäin
+        setShowNav(true);
+      } else {
+        // Scrollataan alaspäin
+        setShowNav(false);
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className="bg-black text-[#beafc2] shadow-md border-b-2 border-[#beafc2] ">
+    <nav
+      className={`
+        fixed top-0 left-0 w-full z-50
+        bg-black/95 backdrop-blur-md
+        text-[#beafc2]
+        shadow-md border-b-2 border-[#beafc2]
+        transition-transform duration-300 ease-in-out
+        ${showNav ? "translate-y-0" : "-translate-y-full"}
+      `}
+    >
       <div className="mx-auto flex items-center justify-between px-6 py-8 md:px-8">
+
         {/* Logo */}
         <div className={`text-2xl md:text-3xl font-bold ${bodoni.className}`}>
           Laura.art
@@ -46,7 +84,6 @@ export default function NavBar() {
             Myytävät teokset
           </Link>
 
-
           <a href="#yhteystiedot" className="hover:text-gray-400">
             Yhteystiedot
           </a>
@@ -54,7 +91,7 @@ export default function NavBar() {
 
         {/* Mobile button */}
         <button
-          className="md:hidden cursor-pointer "
+          className="md:hidden cursor-pointer"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Avaa valikko"
         >

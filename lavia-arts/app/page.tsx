@@ -124,6 +124,81 @@ export default function Home() {
 
       </section>
 
+      {/* VALMIIT MAALAUKSET */}
+<section
+  id="valmiit-maalaukset"
+  className="bg-black text-[#beafc2] px-8 py-24 md:py-20"
+>
+
+  {/* Otsikko */}
+  <div className="text-center mb-20 md:mb-20">
+    <h2
+      className={`text-5xl sm:text-6xl md:text-7xl ${bodoni.className} tracking-wide`}
+    >
+      Myytävät teokset
+    </h2>
+
+    <div className="mx-auto mt-6 w-16 h-px bg-[#beafc2]/50" />
+  </div>
+
+
+  {/* Kuva + teksti */}
+  <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+
+    {/* Vasen – kuva */}
+    <div className="relative w-full aspect-[4/5] overflow-hidden">
+      <Image
+        src="/kesäilta.jpeg"
+        alt="Laura.art valmis maalaus"
+        fill
+        sizes="(max-width: 768px) 100vw, 50vw"
+        className="object-cover transition-transform duration-700 hover:scale-105"
+      />
+    </div>
+
+
+    {/* Oikea – teksti */}
+    <div className="max-w-xl">
+
+      <h3
+        className={`${bodoni.className} text-3xl md:text-4xl mb-8`}
+      >
+        Valmis teos kotiisi
+      </h3>
+
+      <p
+        className={`${bodoni.className} text-lg md:text-2xl leading-relaxed opacity-90`}
+      >
+        Löydä valmiista maalauksista juuri sinun tilaasi
+        sopiva teos.
+      </p>
+
+      <p
+        className={`${bodoni.className} mt-6 text-lg md:text-2xl leading-relaxed opacity-90`}
+      >
+        Jokainen maalaus on yksilöllinen ja valmis
+        ripustettavaksi sellaisenaan.
+      </p>
+
+      <p
+        className={`${mea.className} mt-8 text-lg md:text-4xl`}
+      >
+        Ehkä seuraava teoksesi odottaa täällä.
+      </p>
+
+      <a
+        href="/valmiitmaalaukset"
+        className={`inline-block mt-10 border border-[#beafc2]/60 px-8 py-4 text-sm tracking-[0.2em] uppercase transition-all duration-300 hover:bg-[#beafc2] hover:text-black ${bodoni.className}`}
+      >
+        Tutustu maalauksiin
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
     </div>
   );
 }
