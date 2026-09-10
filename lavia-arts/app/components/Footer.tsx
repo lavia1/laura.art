@@ -64,7 +64,7 @@ export default function Footer() {
               </svg>
 
               <span className={`${bodoni.className} text-2xl`}>
-                laviaaw@gmail.com
+                laviaaw@hotmail.com
               </span>
             </a>
 

@@ -31,6 +31,14 @@ export default function Tilaustyot() {
 
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
+    const imagesIso = [
+  "/bmwdrifti.jpeg",
+  "/bmwpunanen.jpeg",
+  "/traktori.jpeg",
+];
+
+const [selectedImageIso, setSelectedImageIso] = useState(imagesIso[0]);
+
   return (
     <main className="min-h-screen bg-black text-[#beafc2]">
 
@@ -40,13 +48,13 @@ export default function Tilaustyot() {
         <h1
           className={`${bodoni.className} text-5xl sm:text-6xl md:text-7xl tracking-wide`}
         >
-          Tilaustyöt
+          Tilaustyöt pieni koko 
         </h1>
 
         <p
           className={`${mea.className} mt-4 text-3xl sm:text-4xl md:text-5xl`}
         >
-          Alk. 30 €
+        40 €
         </p>
 
         <div className="mx-auto mt-8 w-16 h-px bg-[#beafc2]/50" />
@@ -133,7 +141,7 @@ export default function Tilaustyot() {
           <div className={`${bodoni.className} text-lg md:text-xl leading-relaxed`}>
 
             <p className="mb-6 opacity-90">
-              Koko: 24 × 18 cm sekä sovittaessa isompi.
+              Koko: 24 × 18 cm
             </p>
 
             <p className="mb-6 opacity-90">
@@ -144,9 +152,7 @@ export default function Tilaustyot() {
             </p>
 
             <p className="mb-8 opacity-90">
-              Voit vaikuttaa teoksen tunnelmaan, väreihin ja
-              kokoon. Yhdessä suunnitellaan juuri sinulle sopiva
-              kokonaisuus.
+              Teos on ilman taustaa. Taustan halutessa tutustu alla olevaan ison koon tilaustyöhön, jossa tausta on osa kokonaisuutta.
             </p>
 
 
@@ -184,6 +190,151 @@ export default function Tilaustyot() {
         </div>
 
       </section>
+      
+      {/* TILAUSTYÖT ISO KOKO */}
+<section className="px-8 pt-24 pb-16 text-center">
+
+  <h1
+    className={`${bodoni.className} text-5xl sm:text-6xl md:text-7xl tracking-wide`}
+  >
+    Tilaustyöt iso koko
+  </h1>
+
+  <p
+    className={`${mea.className} mt-4 text-3xl sm:text-4xl md:text-5xl`}
+  >
+    80 €
+  </p>
+
+  <div className="mx-auto mt-8 w-16 h-px bg-[#beafc2]/50" />
+
+</section>
+
+
+{/* ISO KOKO - GALLERIA */}
+<section className="mx-auto max-w-6xl px-8 pb-24">
+
+  <div className="grid grid-cols-1 md:grid-cols-[1fr_100px] gap-5">
+
+    {/* ISO KUVA */}
+    <div className="relative overflow-hidden bg-[#111] aspect-[4/3]">
+
+      <Image src={selectedImageIso} 
+      alt="Laura.art iso tilaustyö" 
+      fill sizes="(max-width: 768px) 100vw, calc(100vw - 160px)" 
+      className="object-contain transition-opacity duration-500" 
+      />
+
+    </div>
+
+    {/* PIKKUKUVAT */}
+<div className="flex md:flex-col gap-3 overflow-x-auto md:overflow-visible">
+
+  {imagesIso.map((image) => (
+    <button
+      key={image}
+      onClick={() => setSelectedImageIso(image)}
+      className={`
+        relative shrink-0 overflow-hidden
+        transition-all duration-300
+        ${
+          selectedImageIso === image
+            ? "ring-2 ring-[#beafc2]"
+            : "opacity-50 hover:opacity-100"
+        }
+      `}
+    >
+      <Image
+        src={image}
+        alt="Iso tilaustyö"
+        width={80}
+        height={80}
+        className="w-20 h-20 object-cover"
+      />
+    </button>
+  ))}
+
+</div>
+
+  </div>
+
+
+  {/* TEKSTIOSIO */}
+  <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
+
+    {/* Vasen */}
+    <div>
+
+      <h2
+        className={`${bodoni.className} text-3xl md:text-4xl mb-6`}
+      >
+        Suurempi koko.
+        <br />
+        Suurempi tunnelma.
+      </h2>
+
+      <p
+        className={`${mea.className} text-3xl md:text-4xl leading-relaxed`}
+      >
+        Näyttävä teos suurempaan tilaan.
+      </p>
+
+    </div>
+
+
+    {/* Oikea */}
+    <div
+      className={`${bodoni.className} text-lg md:text-xl leading-relaxed`}
+    >
+
+      <p className="mb-6 opacity-90">
+        Koko: 29,5 x 21 cm
+      </p>
+
+      <p className="mb-6 opacity-90">
+        Suurempi tilaustyö sisältää taustan, joka tuo kuvaan lisää syvyyttä ja tunnelmaa.
+      </p>
+
+      <p className="mb-8 opacity-90">
+        Teoksen aihe, tunnelma ja värit suunnitellaan
+        yhdessä juuri sinun toiveidesi mukaan.
+      </p>
+
+
+      {/* Yhteystiedot */}
+      <div className="border-t border-[#beafc2]/20 pt-6">
+
+        <p className="text-sm uppercase tracking-[0.2em] opacity-50 mb-3">
+          Tiedustelut
+        </p>
+
+        <a
+          href="mailto:laviaaw@hotmail.com"
+          className="inline-block text-lg hover:opacity-60 transition-opacity"
+        >
+          laviaaw@hotmail.com
+        </a>
+
+        <p className="mt-2 text-lg">
+          Instagram & TikTok: @laviasart
+        </p>
+
+      </div>
+
+
+      {/* Nappi */}
+      <a
+        href="mailto:laviaaw@hotmail.com?subject=Kysely%20isosta%20tilaustyöstä"
+        className="inline-block mt-10 border border-[#beafc2]/60 px-8 py-4 text-sm tracking-[0.2em] uppercase transition-all duration-300 hover:bg-[#beafc2] hover:text-black"
+      >
+        Kysy tilaustyöstä
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
 
     </main>
   );

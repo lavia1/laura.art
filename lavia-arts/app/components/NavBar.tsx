@@ -42,6 +42,10 @@ export default function NavBar() {
             Tilaustyöt
           </Link>
 
+          <Link href="/valmiitmaalaukset" className="hover:text-gray-400">
+            Myytävät teokset
+          </Link>
+
 
           <a href="#yhteystiedot" className="hover:text-gray-400">
             Yhteystiedot
@@ -91,6 +95,10 @@ export default function NavBar() {
 
           <Link href="/tilaustyot" onClick={() => setMenuOpen(false)}>
             Tilaustyöt
+          </Link>
+
+          <Link href="/valmiitmaalaukset" onClick={() => setMenuOpen(false)}>
+            Myytävät teokset
           </Link>
 
           <a href="#yhteystiedot" onClick={() => setMenuOpen(false)}>
