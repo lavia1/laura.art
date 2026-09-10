@@ -273,12 +273,6 @@ const [selectedImageIso, setSelectedImageIso] = useState(imagesIso[0]);
         Suurempi tunnelma.
       </h2>
 
-      <p
-        className={`${mea.className} text-3xl md:text-4xl leading-relaxed`}
-      >
-        Näyttävä teos suurempaan tilaan.
-      </p>
-
     </div>
 
 
