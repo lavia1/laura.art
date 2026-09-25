@@ -24,7 +24,9 @@ const maalaukset = [
     id: "maalaus-1",
     title: "Sininen talvi",
     price: "180 €",
+     size: "19.5x19.5 cm",
     image: "/sininentalvi2.jpeg",
+    
   },
   {
     id: "maalaus-2",

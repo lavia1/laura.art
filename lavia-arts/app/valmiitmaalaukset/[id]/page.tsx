@@ -17,9 +17,10 @@ const maalaukset = [
     id: "maalaus-1",
     title: "Sininen talvi",
     price: "180 €",
-    size: "50 × 70 cm",
+    size: "19.5 × 19.5 cm",
     image: "/sininentalvi2.jpeg",
     description: "Akryylimaalaus kankaalle.",
+    stripeLink:"https://buy.stripe.com/test_7sY00lfk7cIa9GBfCo2Ry00"
   },
   {
     id: "maalaus-2",
@@ -150,11 +151,13 @@ export default async function MaalausPage({
 
             {/* YHTEYDENOTTO */}
             <a
-              href="mailto:laviaaw@hotmail.com"
-              className={`${bodoni.className} inline-block mt-8 sm:mt-10 w-full sm:w-auto text-center border border-[#beafc2]/60 px-6 sm:px-8 py-4 text-xs sm:text-sm tracking-[0.2em] uppercase transition-all duration-300 hover:bg-[#beafc2] hover:text-black`}
-            >
-              Kysy teoksesta
-            </a>
+  href={maalaus.stripeLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  className={`${bodoni.className} inline-block mt-8 sm:mt-10 w-full sm:w-auto text-center border border-[#beafc2]/60 px-6 sm:px-8 py-4 text-xs sm:text-sm tracking-[0.2em] uppercase transition-all duration-300 hover:bg-[#beafc2] hover:text-black`}
+>
+  Osta teos
+</a>
 
           </div>
         </div>
