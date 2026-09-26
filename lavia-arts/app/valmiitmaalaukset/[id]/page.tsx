@@ -19,7 +19,7 @@ const maalaukset = [
     price: "190.80 €",
     size: "19.5 × 19.5 cm",
     image: "/sininentalvi2.jpeg",
-    description: "Akryylimaalaus kankaalle.",
+    description: "Talven mökkitunnelmaa.",
     shipping:"11.80 € (sisältyy hintaan)",
     stripeLink:"https://buy.stripe.com/3cIdR87Vy7bRa7N07XfjG05"
   },
@@ -29,7 +29,7 @@ const maalaukset = [
     price: "100 €",
     size: "24 × 30 cm",
     image: "/kesailta.jpeg",
-    description: "Akryylimaalaus kankaalle.",
+    description: "Värit kukoistavat.",
     stripeLink:"https://buy.stripe.com/cNi6oG1xa9jZ2Fl8EtfjG01"
   },
   {
@@ -38,7 +38,7 @@ const maalaukset = [
     price: "30 €",
     size: "40 × 50 cm",
     image: "/auringonkukat.jpeg",
-    description: "Akryylimaalaus kankaalle.",
+    description: "Kuvankaunis pelto.",
     stripeLink:"https://buy.stripe.com/dRmfZg1xafIn4Nt9IxfjG02"
   },
   {
@@ -47,7 +47,7 @@ const maalaukset = [
     price: "120 €",
     size: "20 × 30 cm",
     image: "/lilatalvi.jpeg",
-    description: "Akryylimaalaus kankaalle.",
+    description: "Vesi kantaa heijastusta.",
     stripeLink: "https://buy.stripe.com/aFa14mdfScwb0xddYNfjG03"
   },
 ];

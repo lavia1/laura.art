@@ -46,6 +46,10 @@ export default function NavBar() {
                 Home
               </Link>
 
+              <Link href="/en/commissions" className="hover:text-gray-400">
+                Commissions
+              </Link>
+
               <Link href="/en/paintings" className="hover:text-gray-400">
                 Original Paintings
               </Link>
@@ -143,6 +147,13 @@ export default function NavBar() {
             <>
               <Link href="/en" onClick={() => setMenuOpen(false)}>
                 Home
+              </Link>
+
+              <Link
+                href="/en/commissions"
+                onClick={() => setMenuOpen(false)}
+              >
+                Commissions
               </Link>
 
               <Link
