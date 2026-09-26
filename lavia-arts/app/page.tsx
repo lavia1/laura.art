@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Monsieur_La_Doulaise, Mea_Culpa, Bodoni_Moda } from "next/font/google";
+import Link from "next/dist/client/link";
 
 const monsieur = Monsieur_La_Doulaise({
   weight: "400",
@@ -49,6 +50,148 @@ export default function Home() {
         </div>
       </div>
 
+
+      
+{/* PIKAVALIKKO */}
+<section className="bg-black text-[#beafc2] px-8 pt-28 pb-8 md:pt-36 md:pb-12">
+
+  <div className="mx-auto max-w-6xl">
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+      {/* TILAUSTYÖT */}
+      <Link
+        href="/tilaustyot"
+        className="group relative h-[320px] md:h-[380px] overflow-hidden"
+      >
+        <Image
+          src="/traktori.jpeg"
+          alt="Tilaustyöt"
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+
+        {/* TUMMA OVERLAY */}
+        <div className="absolute inset-0 bg-black/55 group-hover:bg-black/35 transition-colors duration-500" />
+
+        {/* TEKSTI */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+
+          <h2
+            className={`${bodoni.className} text-3xl sm:text-4xl md:text-3xl lg:text-4xl`}
+          >
+            Tilaustyöt
+          </h2>
+
+          <div className="mt-4 w-10 h-px bg-[#beafc2]/70" />
+
+          <p
+            className={`${bodoni.className} mt-4 text-sm sm:text-base opacity-90`}
+          >
+            Suunnitellaan sinulle oma teos
+          </p>
+
+          <span
+            className={`${bodoni.className} mt-6 text-xs tracking-[0.2em] uppercase opacity-80`}
+          >
+            Tutustu →
+          </span>
+
+        </div>
+      </Link>
+
+
+      {/* MAALAUKSET */}
+      <Link
+        href="/valmiitmaalaukset"
+        className="group relative h-[320px] md:h-[380px] overflow-hidden"
+      >
+        <Image
+          src="/auringonkukat.jpeg"
+          alt="Myytävät maalaukset"
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+
+        {/* TUMMA OVERLAY */}
+        <div className="absolute inset-0 bg-black/55 group-hover:bg-black/35 transition-colors duration-500" />
+
+        {/* TEKSTI */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+
+          <h2
+            className={`${bodoni.className} text-3xl sm:text-4xl md:text-3xl lg:text-4xl`}
+          >
+            Myytävät maalaukset
+          </h2>
+
+          <div className="mt-4 w-10 h-px bg-[#beafc2]/70" />
+
+          <p
+            className={`${bodoni.className} mt-4 text-sm sm:text-base opacity-90`}
+          >
+            Alkuperäiset teokset
+          </p>
+
+          <span
+            className={`${bodoni.className} mt-6 text-xs tracking-[0.2em] uppercase opacity-80`}
+          >
+            Katso teokset →
+          </span>
+
+        </div>
+      </Link>
+
+
+      {/* PRINTIT */}
+      <Link
+        href="/printit"
+        className="group relative h-[320px] md:h-[380px] overflow-hidden"
+      >
+        <Image
+          src="/bmwdrifti.jpeg"
+          alt="Printit"
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+
+        {/* TUMMA OVERLAY */}
+        <div className="absolute inset-0 bg-black/55 group-hover:bg-black/35 transition-colors duration-500" />
+
+        {/* TEKSTI */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+
+          <h2
+            className={`${bodoni.className} text-3xl sm:text-4xl md:text-3xl lg:text-4xl`}
+          >
+            Printit
+          </h2>
+
+          <div className="mt-4 w-10 h-px bg-[#beafc2]/70" />
+
+          <p
+            className={`${bodoni.className} mt-4 text-sm sm:text-base opacity-90`}
+          >
+            Taidetta kotiin printtinä
+          </p>
+
+          <span
+            className={`${bodoni.className} mt-6 text-xs tracking-[0.2em] uppercase opacity-80`}
+          >
+            Tutustu printteihin →
+          </span>
+
+        </div>
+      </Link>
+
+    </div>
+
+  </div>
+
+</section>
 
       {/* TILAUSTYÖT */}
       <section
