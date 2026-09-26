@@ -43,7 +43,7 @@ export default function Home() {
             <p
               className={`mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl ${mea.className}`}
             >
-              Tilaustyöt, maalaukset & muu taide
+              Tilaustyöt, maalaukset & printit
             </p>
 
           </div>

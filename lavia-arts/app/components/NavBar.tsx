@@ -26,9 +26,12 @@ export default function NavBar() {
     <nav className="sticky top-0 z-50 bg-black/95 backdrop-blur-md text-[#beafc2] shadow-md border-b-2 border-[#beafc2]">
       <div className="mx-auto flex items-center justify-between px-6 py-8 md:px-8">
         {/* Logo */}
-        <div className={`text-2xl md:text-3xl font-bold ${bodoni.className}`}>
-          Laura.art
-        </div>
+        <Link
+  href="/"
+  className={`text-2xl md:text-3xl font-bold ${bodoni.className} hover:opacity-70 transition-opacity`}
+>
+  Laura.art
+</Link>
 
         {/* Desktop menu */}
         <div
