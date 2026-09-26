@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Mea_Culpa, Fleur_De_Leah, Bodoni_Moda } from "next/font/google";
+import { usePathname } from "next/navigation";
+
+import { Mea_Culpa, Bodoni_Moda } from "next/font/google";
+
 import Link from "next/link";
 
 const bodoni = Bodoni_Moda({
@@ -14,56 +17,96 @@ const mea = Mea_Culpa({
   subsets: ["latin"],
 });
 
-const fleur = Fleur_De_Leah({
-  weight: "400",
-  subsets: ["latin"],
-});
-
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const pathname = usePathname();
+
+  const isEnglish = pathname.startsWith("/en");
 
   return (
     <nav className="sticky top-0 z-50 bg-black/95 backdrop-blur-md text-[#beafc2] shadow-md border-b-2 border-[#beafc2]">
       <div className="mx-auto flex items-center justify-between px-6 py-8 md:px-8">
-        {/* Logo */}
-        <Link
-  href="/"
-  className={`text-2xl md:text-3xl font-bold ${bodoni.className} hover:opacity-70 transition-opacity`}
->
-  Laura.art
-</Link>
 
-        {/* Desktop menu */}
+        {/* LOGO */}
+        <Link
+          href={isEnglish ? "/en" : "/"}
+          className={`text-2xl md:text-3xl font-bold ${bodoni.className} hover:opacity-70 transition-opacity`}
+        >
+          Laura.art
+        </Link>
+
+        {/* DESKTOP MENU */}
         <div
           className={`hidden md:flex items-center space-x-6 text-lg xl:text-xl font-semibold ${bodoni.className}`}
         >
-          <Link href="/" className="hover:text-gray-400">
-            Etusivu
-          </Link>
+          {isEnglish ? (
+            <>
+              <Link href="/en" className="hover:text-gray-400">
+                Home
+              </Link>
 
-          <Link href="/tilaustyot" className="hover:text-gray-400">
-            Tilaustyöt
-          </Link>
+              <Link href="/en/paintings" className="hover:text-gray-400">
+                Original Paintings
+              </Link>
 
-          <Link href="/valmiitmaalaukset" className="hover:text-gray-400">
-            Myytävät teokset
-          </Link>
+              <Link href="/en/prints" className="hover:text-gray-400">
+                Prints
+              </Link>
 
-          <Link href="/printit" className="hover:text-gray-400">
-            Printit
-          </Link>
+              <a href="#contact" className="hover:text-gray-400">
+                Contact
+              </a>
+            </>
+          ) : (
+            <>
+              <Link href="/" className="hover:text-gray-400">
+                Etusivu
+              </Link>
 
+              <Link href="/tilaustyot" className="hover:text-gray-400">
+                Tilaustyöt
+              </Link>
 
-          <a href="#yhteystiedot" className="hover:text-gray-400">
-            Yhteystiedot
-          </a>
+              <Link href="/valmiitmaalaukset" className="hover:text-gray-400">
+                Myytävät teokset
+              </Link>
+
+              <Link href="/printit" className="hover:text-gray-400">
+                Printit
+              </Link>
+
+              <a href="#yhteystiedot" className="hover:text-gray-400">
+                Yhteystiedot
+              </a>
+            </>
+          )}
+
+          {/* LANGUAGE SWITCH */}
+          <div className="flex items-center gap-2 ml-2">
+            <Link
+              href="/"
+              className={!isEnglish ? "opacity-100" : "opacity-40 hover:opacity-100"}
+            >
+              FI
+            </Link>
+
+            <span className="opacity-30">|</span>
+
+            <Link
+              href="/en"
+              className={isEnglish ? "opacity-100" : "opacity-40 hover:opacity-100"}
+            >
+              EN
+            </Link>
+          </div>
         </div>
 
-        {/* Mobile button */}
+        {/* MOBILE BUTTON */}
         <button
-          className="md:hidden cursor-pointer "
+          className="md:hidden cursor-pointer"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Avaa valikko"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -91,30 +134,88 @@ export default function NavBar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* MOBILE MENU */}
       {menuOpen && (
         <div
-          className={`flex flex-col gap-4 px-4 pb-6 text-lg font-semibold md:hidden ${bodoni.className}`}
+          className={`flex flex-col gap-4 px-6 pb-6 text-lg font-semibold md:hidden ${bodoni.className}`}
         >
-          <Link href="/" onClick={() => setMenuOpen(false)}>
-            Etusivu
-          </Link>
+          {isEnglish ? (
+            <>
+              <Link href="/en" onClick={() => setMenuOpen(false)}>
+                Home
+              </Link>
 
-          <Link href="/tilaustyot" onClick={() => setMenuOpen(false)}>
-            Tilaustyöt
-          </Link>
+              <Link
+                href="/en/paintings"
+                onClick={() => setMenuOpen(false)}
+              >
+                Original Paintings
+              </Link>
 
-          <Link href="/valmiitmaalaukset" onClick={() => setMenuOpen(false)}>
-            Myytävät teokset
-          </Link>
+              <Link
+                href="/en/prints"
+                onClick={() => setMenuOpen(false)}
+              >
+                Prints
+              </Link>
 
-          <Link href="/printit" onClick={() => setMenuOpen(false)}>
-            Printit
-          </Link>
+              <a
+                href="#contact"
+                onClick={() => setMenuOpen(false)}
+              >
+                Contact
+              </a>
+            </>
+          ) : (
+            <>
+              <Link href="/" onClick={() => setMenuOpen(false)}>
+                Etusivu
+              </Link>
 
-          <a href="#yhteystiedot" onClick={() => setMenuOpen(false)}>
-            Yhteystiedot
-          </a>
+              <Link href="/tilaustyot" onClick={() => setMenuOpen(false)}>
+                Tilaustyöt
+              </Link>
+
+              <Link
+                href="/valmiitmaalaukset"
+                onClick={() => setMenuOpen(false)}
+              >
+                Myytävät teokset
+              </Link>
+
+              <Link href="/printit" onClick={() => setMenuOpen(false)}>
+                Printit
+              </Link>
+
+              <a
+                href="#yhteystiedot"
+                onClick={() => setMenuOpen(false)}
+              >
+                Yhteystiedot
+              </a>
+            </>
+          )}
+
+          {/* MOBILE LANGUAGE SWITCH */}
+          <div className="flex items-center gap-2 pt-2">
+            <Link
+              href="/"
+              onClick={() => setMenuOpen(false)}
+              className={!isEnglish ? "opacity-100" : "opacity-40"}
+            >
+              FI
+            </Link>
+
+            <span className="opacity-30">|</span>
+
+            <Link
+              href="/en"
+              onClick={() => setMenuOpen(false)}
+              className={isEnglish ? "opacity-100" : "opacity-40"}
+            >
+              EN
+            </Link>
+          </div>
         </div>
       )}
     </nav>

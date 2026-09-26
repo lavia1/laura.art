@@ -1,4 +1,7 @@
+"use client";
+
 import { Monsieur_La_Doulaise, Mea_Culpa, Bodoni_Moda } from "next/font/google";
+import { usePathname } from "next/navigation";
 
 const monsieur = Monsieur_La_Doulaise({
   weight: "400",
@@ -16,16 +19,19 @@ const mea = Mea_Culpa({
 });
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isEnglish = pathname.startsWith("/en");
+
   return (
     <footer
-      id="yhteystiedot"
-      className="bg-black text-[#beafc2] px-8 py-16 border-t-2 border-[#beafc2] "
+      id={isEnglish ? "contact" : "yhteystiedot"}
+      className="bg-black text-[#beafc2] px-8 py-16 border-t-2 border-[#beafc2]"
     >
       <div className="mx-auto max-w-6xl">
 
         <div className="flex flex-col md:flex-row justify-between gap-12">
 
-          {/* Vasen */}
+          {/* LEFT */}
           <div className="max-w-md">
             <h3
               className={`${bodoni.className} text-5xl tracking-wide`}
@@ -36,23 +42,24 @@ export default function Footer() {
             <p
               className={`${mea.className} mt-5 text-3xl leading-relaxed opacity-90`}
             >
-              Uniikkeja tilaustöitä ja valmiita teoksia jokaiseen kotiin.
+              {isEnglish
+                ? "Unique commissioned artwork and original pieces for every home."
+                : "Uniikkeja tilaustöitä ja valmiita teoksia jokaiseen kotiin."}
             </p>
           </div>
 
-
-          {/* Oikea */}
+          {/* RIGHT */}
           <div className="flex flex-col gap-5 md:min-w-[280px]">
 
             <p
               className={`${bodoni.className} text-lg uppercase tracking-[0.25em] opacity-60`}
             >
-              Ota yhteyttä
+              {isEnglish ? "Get in touch" : "Ota yhteyttä"}
             </p>
 
-            {/* Email */}
+            {/* EMAIL */}
             <a
-              href="mailto:laviaaw@gmail.com"
+              href="mailto:laviaaw@hotmail.com"
               className="group flex items-center gap-4 transition-all duration-300 hover:translate-x-2"
             >
               <svg
@@ -68,8 +75,7 @@ export default function Footer() {
               </span>
             </a>
 
-
-            {/* Instagram */}
+            {/* INSTAGRAM */}
             <a
               href="https://www.instagram.com/laviasart/"
               target="_blank"
@@ -91,8 +97,7 @@ export default function Footer() {
               </span>
             </a>
 
-
-            {/* TikTok */}
+            {/* TIKTOK */}
             <a
               href="https://www.tiktok.com/@laviasart"
               target="_blank"
@@ -115,18 +120,18 @@ export default function Footer() {
           </div>
         </div>
 
-
-        {/* Alareuna */}
+        {/* BOTTOM */}
         <div className="mt-16 pt-6 border-t border-[#beafc2]/20 flex flex-col sm:flex-row justify-between gap-3">
+
           <p className={`${bodoni.className} text-xs opacity-50`}>
             © {new Date().getFullYear()} Laura.art
           </p>
 
           <p className={`${bodoni.className} text-xs opacity-50`}>
-            Art &amp; creativity
+            {isEnglish ? "Art & creativity" : "Taide & luovuus"}
           </p>
-        </div>
 
+        </div>
       </div>
     </footer>
   );
