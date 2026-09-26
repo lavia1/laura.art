@@ -46,6 +46,10 @@ export default function NavBar() {
             Myytävät teokset
           </Link>
 
+          <Link href="/printit" className="hover:text-gray-400">
+            Printit
+          </Link>
+
 
           <a href="#yhteystiedot" className="hover:text-gray-400">
             Yhteystiedot
