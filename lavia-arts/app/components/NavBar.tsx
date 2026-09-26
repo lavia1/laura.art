@@ -105,6 +105,10 @@ export default function NavBar() {
             Myytävät teokset
           </Link>
 
+          <Link href="/printit" onClick={() => setMenuOpen(false)}>
+            Printit
+          </Link>
+
           <a href="#yhteystiedot" onClick={() => setMenuOpen(false)}>
             Yhteystiedot
           </a>
