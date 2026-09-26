@@ -2,9 +2,7 @@
 
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-
 import { Mea_Culpa, Bodoni_Moda } from "next/font/google";
-
 import Link from "next/link";
 
 const bodoni = Bodoni_Moda({
@@ -19,9 +17,7 @@ const mea = Mea_Culpa({
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const pathname = usePathname();
-
   const isEnglish = pathname.startsWith("/en");
 
   return (
@@ -46,11 +42,17 @@ export default function NavBar() {
                 Home
               </Link>
 
-              <Link href="/en/commissions" className="hover:text-gray-400">
+              <Link
+                href="/en/commissions"
+                className="hover:text-gray-400"
+              >
                 Commissions
               </Link>
 
-              <Link href="/en/paintings" className="hover:text-gray-400">
+              <Link
+                href="/en/paintings"
+                className="hover:text-gray-400"
+              >
                 Original Paintings
               </Link>
 
@@ -68,11 +70,17 @@ export default function NavBar() {
                 Etusivu
               </Link>
 
-              <Link href="/tilaustyot" className="hover:text-gray-400">
+              <Link
+                href="/tilaustyot"
+                className="hover:text-gray-400"
+              >
                 Tilaustyöt
               </Link>
 
-              <Link href="/valmiitmaalaukset" className="hover:text-gray-400">
+              <Link
+                href="/valmiitmaalaukset"
+                className="hover:text-gray-400"
+              >
                 Myytävät teokset
               </Link>
 
@@ -80,17 +88,24 @@ export default function NavBar() {
                 Printit
               </Link>
 
-              <a href="#yhteystiedot" className="hover:text-gray-400">
+              <a
+                href="#yhteystiedot"
+                className="hover:text-gray-400"
+              >
                 Yhteystiedot
               </a>
             </>
           )}
 
-          {/* LANGUAGE SWITCH */}
+          {/* DESKTOP LANGUAGE SWITCH */}
           <div className="flex items-center gap-2 ml-2">
             <Link
               href="/"
-              className={!isEnglish ? "opacity-100" : "opacity-40 hover:opacity-100"}
+              className={
+                !isEnglish
+                  ? "opacity-100"
+                  : "opacity-40 hover:opacity-100"
+              }
             >
               FI
             </Link>
@@ -99,43 +114,78 @@ export default function NavBar() {
 
             <Link
               href="/en"
-              className={isEnglish ? "opacity-100" : "opacity-40 hover:opacity-100"}
+              className={
+                isEnglish
+                  ? "opacity-100"
+                  : "opacity-40 hover:opacity-100"
+              }
             >
               EN
             </Link>
           </div>
         </div>
 
-        {/* MOBILE BUTTON */}
-        <button
-          className="md:hidden cursor-pointer"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+        {/* MOBILE LANGUAGE SWITCH + MENU BUTTON */}
+        <div className="flex items-center gap-4 md:hidden">
+
+          {/* LANGUAGE SWITCH */}
+          <div className={`flex items-center gap-2 ${bodoni.className}`}>
+            <Link
+              href="/"
+              className={
+                !isEnglish
+                  ? "opacity-100"
+                  : "opacity-40 hover:opacity-100"
+              }
+            >
+              FI
+            </Link>
+
+            <span className="opacity-30">|</span>
+
+            <Link
+              href="/en"
+              className={
+                isEnglish
+                  ? "opacity-100"
+                  : "opacity-40 hover:opacity-100"
+              }
+            >
+              EN
+            </Link>
+          </div>
+
+          {/* HAMBURGER MENU */}
+          <button
+            className="cursor-pointer"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
-            {menuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            )}
-          </svg>
-        </button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {menuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {/* MOBILE MENU */}
@@ -145,7 +195,10 @@ export default function NavBar() {
         >
           {isEnglish ? (
             <>
-              <Link href="/en" onClick={() => setMenuOpen(false)}>
+              <Link
+                href="/en"
+                onClick={() => setMenuOpen(false)}
+              >
                 Home
               </Link>
 
@@ -179,11 +232,17 @@ export default function NavBar() {
             </>
           ) : (
             <>
-              <Link href="/" onClick={() => setMenuOpen(false)}>
+              <Link
+                href="/"
+                onClick={() => setMenuOpen(false)}
+              >
                 Etusivu
               </Link>
 
-              <Link href="/tilaustyot" onClick={() => setMenuOpen(false)}>
+              <Link
+                href="/tilaustyot"
+                onClick={() => setMenuOpen(false)}
+              >
                 Tilaustyöt
               </Link>
 
@@ -194,7 +253,10 @@ export default function NavBar() {
                 Myytävät teokset
               </Link>
 
-              <Link href="/printit" onClick={() => setMenuOpen(false)}>
+              <Link
+                href="/printit"
+                onClick={() => setMenuOpen(false)}
+              >
                 Printit
               </Link>
 
@@ -206,27 +268,6 @@ export default function NavBar() {
               </a>
             </>
           )}
-
-          {/* MOBILE LANGUAGE SWITCH */}
-          <div className="flex items-center gap-2 pt-2">
-            <Link
-              href="/"
-              onClick={() => setMenuOpen(false)}
-              className={!isEnglish ? "opacity-100" : "opacity-40"}
-            >
-              FI
-            </Link>
-
-            <span className="opacity-30">|</span>
-
-            <Link
-              href="/en"
-              onClick={() => setMenuOpen(false)}
-              className={isEnglish ? "opacity-100" : "opacity-40"}
-            >
-              EN
-            </Link>
-          </div>
         </div>
       )}
     </nav>
