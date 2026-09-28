@@ -257,7 +257,7 @@ export default function Home() {
           {/* Image */}
           <div className="relative w-full aspect-[4/5] overflow-hidden">
             <Image
-              src="/kesäilta.jpeg"
+              src="/kesailta.jpeg"
               alt="Laura.art original painting"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
