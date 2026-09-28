@@ -160,15 +160,24 @@ const [selectedImageIso, setSelectedImageIso] = useState(imagesIso[0]);
             <div className="border-t border-[#beafc2]/20 pt-6">
 
               <p className="text-sm uppercase tracking-[0.2em] opacity-50 mb-3">
-                Tiedustelut
-              </p>
+  Tiedustelut
+</p>
 
-              <a
-                href="mailto:laviaaw@hotmail.com"
-                className="inline-block text-lg hover:opacity-60 transition-opacity"
-              >
-                laviaaw@hotmail.com
-              </a>
+<a
+  href="mailto:laviaaw@hotmail.com"
+  className="block text-lg hover:opacity-60 transition-opacity"
+>
+  laviaaw@hotmail.com
+</a>
+
+<a
+  href="https://wa.me/358453130744"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block text-lg hover:opacity-60 transition-opacity mt-2"
+>
+  WhatsApp
+</a>
 
               <p className="mt-2 text-lg">
                 Instagram & TikTok: @laviasart
@@ -179,7 +188,9 @@ const [selectedImageIso, setSelectedImageIso] = useState(imagesIso[0]);
 
             {/* Nappi */}
             <a
-              href="mailto:laviaaw@hotmail.com"
+               href="https://wa.me/358453130744"
+  target="_blank"
+  rel="noopener noreferrer"
               className="inline-block mt-10 border border-[#beafc2]/60 px-8 py-4 text-sm tracking-[0.2em] uppercase transition-all duration-300 hover:bg-[#beafc2] hover:text-black"
             >
               Kysy tilaustyöstä
@@ -298,16 +309,25 @@ const [selectedImageIso, setSelectedImageIso] = useState(imagesIso[0]);
       {/* Yhteystiedot */}
       <div className="border-t border-[#beafc2]/20 pt-6">
 
-        <p className="text-sm uppercase tracking-[0.2em] opacity-50 mb-3">
-          Tiedustelut
-        </p>
+         <p className="text-sm uppercase tracking-[0.2em] opacity-50 mb-3">
+  Tiedustelut
+</p>
 
-        <a
-          href="mailto:laviaaw@hotmail.com"
-          className="inline-block text-lg hover:opacity-60 transition-opacity"
-        >
-          laviaaw@hotmail.com
-        </a>
+<a
+  href="mailto:laviaaw@hotmail.com"
+  className="block text-lg hover:opacity-60 transition-opacity"
+>
+  laviaaw@hotmail.com
+</a>
+
+<a
+  href="https://wa.me/358453130744"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block text-lg hover:opacity-60 transition-opacity mt-2"
+>
+  WhatsApp
+</a>
 
         <p className="mt-2 text-lg">
           Instagram & TikTok: @laviasart
@@ -318,7 +338,9 @@ const [selectedImageIso, setSelectedImageIso] = useState(imagesIso[0]);
 
       {/* Nappi */}
       <a
-        href="mailto:laviaaw@hotmail.com?subject=Kysely%20isosta%20tilaustyöstä"
+         href="https://wa.me/358453130744"
+  target="_blank"
+  rel="noopener noreferrer"
         className="inline-block mt-10 border border-[#beafc2]/60 px-8 py-4 text-sm tracking-[0.2em] uppercase transition-all duration-300 hover:bg-[#beafc2] hover:text-black"
       >
         Kysy tilaustyöstä
