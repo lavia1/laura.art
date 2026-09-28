@@ -43,6 +43,13 @@ const paintings = [
     size: "20 × 30 cm",
     image: "/lilatalvi.jpeg",
   },
+  {
+    id:"maalaus-5",
+    title:"Magical sunset",
+    price:"28 €",
+    size:"18 x 12 cm",
+    image:"/maisema.jpeg",
+  },
 ];
 
 export default function Paintings() {

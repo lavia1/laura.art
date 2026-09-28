@@ -50,6 +50,13 @@ const maalaukset = [
     size: "20x30 cm",
     image: "/lilatalvi.jpeg",
   },
+  {
+    id:"maalaus-5",
+    title:"Taianomainen auringonlasku",
+    price:"28€",
+    size:"18 x 12 cm",
+    image:"/maisema.jpeg",
+  },
 
 ];
 

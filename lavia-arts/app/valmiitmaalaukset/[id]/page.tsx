@@ -50,6 +50,16 @@ const maalaukset = [
     description: "Vesi kantaa heijastusta.",
     stripeLink: "https://buy.stripe.com/aFa14mdfScwb0xddYNfjG03"
   },
+  {
+    id:"maalaus-5",
+    title:"Taianomainen auringonlasku",
+    price:"28 €",
+    size:"18 x 12 cm",
+    image:"/maisema.jpeg",
+    description:"Taianomainen auringonlasku tuo maagisuutta kotiin.",
+    stripeLink:
+      "https://buy.stripe.com/9B6aEW1xa9jZ4Nt1c1fjG07",
+  },
 ];
 
 export default async function MaalausPage({
