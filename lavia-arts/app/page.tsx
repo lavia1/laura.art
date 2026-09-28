@@ -291,7 +291,7 @@ export default function Home() {
     {/* Vasen – kuva */}
     <div className="relative w-full aspect-[4/5] overflow-hidden">
       <Image
-        src="/kesäilta.jpeg"
+        src="/kesailta.jpeg"
         alt="Laura.art valmis maalaus"
         fill
         sizes="(max-width: 768px) 100vw, 50vw"
