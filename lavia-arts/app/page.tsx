@@ -192,11 +192,97 @@ export default function Home() {
   </div>
 
 </section>
+{/* UUSI TEOS */}
+<section className="bg-black text-[#beafc2] px-6 sm:px-8 pt-10 pb-24 md:pt-14 md:pb-32">
+  <div className="mx-auto max-w-6xl">
+
+    {/* Pieni otsikko */}
+    <div className="text-center mb-14 md:mb-20">
+      <p
+        className={`${mea.className} text-4xl sm:text-4xl md:text-6xl`}
+      >
+        Uusi teos
+      </p>
+
+      <div className="mx-auto mt-3 w-12 h-px bg-[#beafc2]/50" />
+    </div>
+
+    {/* Teos */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+
+      {/* KUVA */}
+      <Link
+        href="/valmiitmaalaukset/maalaus-5"
+        className="group relative block w-full aspect-[4/5] overflow-hidden"
+      >
+        <Image
+          src="/maisema.jpeg"
+          alt="Taianomainen auringonlasku – originaali akryylimaalaus"
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover transition-transform duration-1000 group-hover:scale-105"
+        />
+
+        {/* Hover overlay */}
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-700" />
+
+        {/* View */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+          <span
+            className={`${bodoni.className} border border-[#beafc2]/80 bg-black/60 px-7 py-4 text-xs tracking-[0.25em] uppercase`}
+          >
+            Tutustu teokseen
+          </span>
+        </div>
+      </Link>
+
+      {/* TEKSTI */}
+      <div className="text-center md:text-left">
+
+        <p
+          className={`${bodoni.className} text-lg tracking-[0.3em] uppercase opacity-60 mb-5`}
+        >
+          Nyt saatavilla
+        </p>
+
+        <h2
+          className={`${bodoni.className} text-xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight`}
+        >
+          Taianomainen auringonlasku
+        </h2>
+
+        <div className="mt-7 w-12 h-px bg-[#beafc2]/50 mx-auto md:mx-0" />
+
+        <p
+          className={`${bodoni.className} mt-8 text-lg sm:text-xl md:text-2xl leading-relaxed opacity-80`}
+        >
+          Alkuperäinen akryylimaalaus
+          <br />
+          18 × 12 cm
+        </p>
+
+        <p
+          className={`${mea.className} mt-8 text-4xl sm:text-5xl`}
+        >
+          28 €
+        </p>
+
+        <Link
+          href="/valmiitmaalaukset/maalaus-5"
+          className={`${bodoni.className} inline-block mt-10 border border-[#beafc2]/60 px-8 py-4 text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-[#beafc2] hover:text-black`}
+        >
+          Katso teos
+        </Link>
+
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* TILAUSTYÖT */}
       <section
         id="tilaustyot"
-        className="bg-black text-[#beafc2] px-8 py-24 md:py-20"
+        className="bg-black text-[#beafc2] px-8 py-16 md:py-14"
       >
 
         {/* Otsikko */}
